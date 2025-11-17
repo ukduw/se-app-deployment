@@ -135,7 +135,7 @@ ran after ssh:
 - scp /path/to/local/file username@hostname:/path/to/remote/directory
 
 For AWS EC2 instance:
-- scp -i /path/to/key.pem /path/to/local/script.sh ec2-user@ec2-public-ip:/home/ec2-user/
+- scp -i /path/to/key.pem /path/to/local/script.sh ubuntu@ec2-public-ip:/home/ubuntu/
 
 SSH into server after to check it's there  
 In case, use:

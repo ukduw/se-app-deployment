@@ -127,3 +127,7 @@ misc
     - 0 in an IP address is a wildcard
 
 
+ran after ssh:
+- sudo apt update -y && sudo apt upgrade -y
+- sudo apt install nginx -y
+- sudo systemctl status nginx

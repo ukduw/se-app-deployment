@@ -120,4 +120,10 @@ A computer emulated on a computer
     - Set of security credentials that you use to prove your identity when connecting to an instance
 - Encrypted - only with key pair can you "unscramble"/decrypt messages
 
+misc
+- Port 22 standard
+- SSH uses TCP protocol
+- Can set it so only certain IP addresses are allowed
+    - 0 in an IP address is a wildcard
+
 

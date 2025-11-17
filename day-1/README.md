@@ -126,8 +126,14 @@ misc
 - Can set it so only certain IP addresses are allowed
     - 0 in an IP address is a wildcard
 
-
 ran after ssh:
 - sudo apt update -y && sudo apt upgrade -y
 - sudo apt install nginx -y
 - sudo systemctl status nginx
+
+## Secure copy protocol
+- scp /path/to/local/file username@hostname:/path/to/remote/directory
+
+For AWS EC2 instance:
+- scp -i /path/to/key.pem /path/to/local/script.sh ec2-user@ec2-public-ip:/home/ec2-user/
+

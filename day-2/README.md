@@ -19,6 +19,6 @@ Do it manually, then automate via script
     - `node -v` to check nodejs version
 - `cd` into app folder
 - `sudo npm install`
-- `npm start app.js`
+- `npm start app.js` starts app in foreground
 
 

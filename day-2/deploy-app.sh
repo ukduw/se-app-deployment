@@ -11,6 +11,8 @@ sudo apt install nodejs -y
 cd /
 cd etc/nginx/sites-available
 sudo sed -i '48a\        proxy_pass http://localhost:3000;' default
+    # could also use echo "server { ... }" > sparta_app
+    # sudo ln -s /etc/nginx/sites-available/sparta_app /etc/nginx/sites-enabled/
 
 cd /
 cd ~/nodejs20-se-test-app-2025/app

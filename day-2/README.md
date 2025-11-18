@@ -7,8 +7,17 @@ Do it manually, then automate via script
     - `ls -l script.sh`
 - `./script.sh`
 
-## header
-- 
+## Deploy commands
+- `sudo apt update -y && sudo apt upgrade -y`
+- `sudo apt install unzip -y`
+- `sudo unzip nodejs20-se-test-app-2025.zip`
+    - If scripting, `scp` command cannot be scripted, so `git clone` the unzipped directory instead
+- `sudo apt install nginx -y`
+    - `sudo systemctl status nginx` to check
+- `sudo bash -c "curl -fsSL https://deb.nodesource.com/setup_20.x | bash -"` downloads specific 20.x version of nodejs via curl
+- `sudo apt install nodejs -y`
+    - `node -v` to check nodejs version
+
 
 
 

@@ -27,3 +27,7 @@ SSH into server after to check it's there
 In case, use:
 - chmod +x script.sh
 - ls -l script.sh to check
+
+NOTE: use -r flag to copy a DIRECTORY
+- Recursive copy
+- e.g. scp -i /path/to/key.pem -r /path/to/local/script.sh ubuntu@ec2-public-ip:/home/ubuntu/

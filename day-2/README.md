@@ -21,4 +21,7 @@ Do it manually, then automate via script
 - `sudo npm install`
 - `npm start app.js` starts app in foreground
 
+## Background run
+- `sudo npm install pm2 -g`
+- `pm2 start app.js`
 

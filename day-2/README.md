@@ -17,7 +17,8 @@ Do it manually, then automate via script
 - `sudo bash -c "curl -fsSL https://deb.nodesource.com/setup_20.x | bash -"` downloads specific 20.x version of nodejs via curl
 - `sudo apt install nodejs -y`
     - `node -v` to check nodejs version
-
-
+- `cd` into app folder
+- `sudo npm install`
+- `npm start app.js`
 
 

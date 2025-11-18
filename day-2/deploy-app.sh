@@ -11,5 +11,6 @@ sudo apt install nodejs -y
 cd nodejs20-se-test-app-2025/app
 
 sudo npm install
-npm start app.js    # runs in foreground
+sudo npm install pm2 -g
+pm2 start app.js    # runs in background
 

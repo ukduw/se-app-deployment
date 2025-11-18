@@ -15,7 +15,7 @@ sudo sed -i '48a\        proxy_pass http://localhost:3000;' default
     # sudo ln -s /etc/nginx/sites-available/sparta_app /etc/nginx/sites-enabled/
 
 cd /
-cd ~/nodejs20-se-test-app-2025/app
+cd ~/se-test-app/nodejs20-se-test-app-2025/app
 
 sudo npm install
 sudo npm install pm2 -g

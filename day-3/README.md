@@ -22,9 +22,11 @@ https://www.mongodb.com/docs/v7.0/tutorial/install-mongodb-on-ubuntu/
 - `sudo systemctl status mongod` to check
 
 ### Connecting DB to Web Server/App
-- `export DB_HOST=mongod://DBIPADDRESS:27017/posts` (set environment variable)
-    - e.g. `export DB_HOST=mongod://54.75.59.107:27017/posts`
+- `export DB_HOST=mongodb://DBIPADDRESS:27017/posts` (set environment variable)
+    - e.g. `export DB_HOST=mongodb://54.75.59.107:27017/posts`
 - `printenv` or `printenv DB_HOST` to check
+- `node seeds/seed.js` (seed the database)
+- `pm2 start app.js` (accessible on http://WEBSERVERIPADDRESS/posts)
 
 NOTE: **env variable not persistent** when you use export
 - For **persistence, edit the** `/etc/environment` **file**, adding the new var

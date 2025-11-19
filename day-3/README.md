@@ -12,6 +12,13 @@
 https://www.mongodb.com/docs/v7.0/tutorial/install-mongodb-on-ubuntu/
 
 
+### Configure DB
+- placeholder
+
+### Connecting DB to Web Server/App
+- placeholder
+
+
 ## Databases
 **MongoDB** is the most popular **non-relational**, **noSQL database**. It **stores data as documents**.
 - `27017` default port for `mongod`, `mongos`

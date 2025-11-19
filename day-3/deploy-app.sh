@@ -9,6 +9,7 @@ sudo apt install nginx -y
 sudo apt install sed -y     # again, usually installed by default
 sudo sed -i '51c\proxy_pass http://127.0.0.1:3000;' /etc/nginx/sites-available/default
     # note: the c\ command is for "change" - replaces the whole line, not just modifying it
+    # note: 127.0.0.1 = localhost - it is a "loopback" address
 sudo systemctl restart nginx
 sudo systemctl enable nginx
     # note: pm2 is for the app specifically; forgot to restart/enable the nginx web server itself before to reload the new nginx config...
@@ -23,11 +24,4 @@ sudo npm install
 sudo npm install pm2 -g     # process manager for node apps
 pm2 kill    # kill all node processes; fresh start + may already be running (idempotency - produce same results regardless of times run)
 pm2 start app.js
-
-
-
-
-# cd /
-# cd etc/nginx/sites-available
-# sudo sed -i '48a\        proxy_pass http://localhost:3000;' default
 

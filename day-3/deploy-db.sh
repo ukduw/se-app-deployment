@@ -2,8 +2,7 @@
 
 sudo apt update -y && sudo apt upgrade -y
 
-sudo apt install gnupg -y
-sudo apt install curl -y
+sudo apt install -y gnupg curl
 
 curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | \
    sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg \

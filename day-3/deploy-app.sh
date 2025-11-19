@@ -13,6 +13,7 @@ sudo systemctl restart nginx
 sudo systemctl enable nginx
     # note: pm2 is for the app specifically; forgot to restart/enable the nginx web server itself before to reload the new nginx config...
 
+sudo apt install curl -y    # again, usually installed by default
 sudo bash -c "curl -fsSL https://deb.nodesource.com/setup_20.x | bash -"
 sudo apt install nodejs -y
 

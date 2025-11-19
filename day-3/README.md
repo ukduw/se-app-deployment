@@ -17,6 +17,12 @@ https://documentation.ubuntu.com/server/how-to/databases/install-mysql/
 #### WordPress docs
 https://ubuntu.com/tutorials/install-and-configure-wordpress#1-overview
 
+**LAMP** stack:
+- **Linux**
+- **Apache** (HTTP Server)
+- **Maria DB** or **MySQL** (Relational DBs)
+- **Perl** or **PHP** or **Python**
+
 
 ### Configure, Start DB
 - `cd /etc`

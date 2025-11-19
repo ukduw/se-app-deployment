@@ -30,6 +30,7 @@ https://www.mongodb.com/docs/v7.0/tutorial/install-mongodb-on-ubuntu/
 
 NOTE: **env variable not persistent** when you use export
 - For **persistence, edit the** `/etc/environment` **file**, adding the new var
+- `source /etc/environment` for changes to take effect
 
 
 ## Databases

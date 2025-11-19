@@ -10,7 +10,7 @@ sudo apt install nodejs -y
 
 cd /
 cd etc/nginx/sites-available
-sudo sed -i '48a\        proxy_pass http://localhost:3000;' default
+sudo sed -i '48a\        proxy_pass http://localhost:3000;' default     # note: not idempotent; would insert a new line if run multiple times
     # could also use echo "server { ... }" > sparta_app
     # sudo ln -s /etc/nginx/sites-available/sparta_app /etc/nginx/sites-enabled/
 

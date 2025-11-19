@@ -6,6 +6,7 @@
    sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg \
    --dearmor` (multi-line)
 - `echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list` (creates sources list file; configures how to install mongodb)
+- `sudo apt update -y`
 - `sudo apt install -y mongodb-org=7.0.6 mongodb-org-database=7.0.6 mongodb-org-server=7.0.6 mongodb-mongosh=2.1.5 mongodb-org-mongos=7.0.6 mongodb-org-tools=7.0.6` (mongodb packages; note `-y` is in front of list of packages, applying to all)
 - `mongod --version` to check
 

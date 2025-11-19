@@ -1,7 +1,15 @@
 # Deploying Databases to Cloud
+- `sudo apt update -y && sudo apt upgrade -y`
+- `sudo apt install gnupg -y` (needed to work with **GPG keys**) (in case distro doesn't have it by default)
+- `sudo apt install curl -y` (in case...)
+- `curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | \
+   sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg \
+   --dearmor` (multi-line)
+- `echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list` (creates sources list file; configures how to install mongodb)
+- `sudo apt install -y mongodb-org=7.0.6 mongodb-org-database=7.0.6 mongodb-org-server=7.0.6 mongodb-mongosh=2.1.5 mongodb-org-mongos=7.0.6 mongodb-org-tools=7.0.6` (mongodb packages; note `-y` is in front of list of packages, applying to all)
+- `mongod --version` to check
 
-
-
+https://www.mongodb.com/docs/v7.0/tutorial/install-mongodb-on-ubuntu/
 
 
 ## Databases
@@ -30,3 +38,6 @@ Another good practice is to use `echo "message here"` in bash scripts to log pro
 Protocols:
 - TCP (**resend until success**, accuracy)
 - UDP (**live**, speed)
+
+**GPG key pairs** ensure your download is not tampered with
+- Verifies software package authenticity/integrity before installation

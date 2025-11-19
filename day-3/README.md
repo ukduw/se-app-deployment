@@ -12,7 +12,7 @@
 https://www.mongodb.com/docs/v7.0/tutorial/install-mongodb-on-ubuntu/
 
 
-### Configure DB
+### Configure, Start DB
 - `cd /etc`
 - `sudo nano mongod.conf`
 - Change `bindIp: 127.0.0.1` to `0.0.0.0`

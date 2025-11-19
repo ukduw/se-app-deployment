@@ -13,7 +13,13 @@ https://www.mongodb.com/docs/v7.0/tutorial/install-mongodb-on-ubuntu/
 
 
 ### Configure DB
-- placeholder
+- `cd /etc`
+- `sudo nano mongod.conf`
+- Change `bindIp: 127.0.0.1` to `0.0.0.0`
+    - Would usually change it to specific IP of web app
+- `cd` (no argument = home directory)
+- `sudo systemctl start mongod`
+- `sudo systemctl status mongod` to check
 
 ### Connecting DB to Web Server/App
 - placeholder

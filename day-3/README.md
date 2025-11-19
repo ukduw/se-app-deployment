@@ -14,6 +14,9 @@ https://www.mongodb.com/docs/v7.0/tutorial/install-mongodb-on-ubuntu/
 #### Mysql 8 deploy docs
 https://documentation.ubuntu.com/server/how-to/databases/install-mysql/
 
+#### WordPress docs
+https://ubuntu.com/tutorials/install-and-configure-wordpress#1-overview
+
 
 ### Configure, Start DB
 - `cd /etc`

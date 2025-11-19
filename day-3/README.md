@@ -11,6 +11,9 @@
 
 https://www.mongodb.com/docs/v7.0/tutorial/install-mongodb-on-ubuntu/
 
+#### Mysql 8 deploy docs
+https://documentation.ubuntu.com/server/how-to/databases/install-mysql/
+
 
 ### Configure, Start DB
 - `cd /etc`
@@ -22,6 +25,7 @@ https://www.mongodb.com/docs/v7.0/tutorial/install-mongodb-on-ubuntu/
 - `sudo systemctl status mongod` to check
 
 ### Connecting DB to Web Server/App
+In web server/app instance:
 - `export DB_HOST=mongodb://DBIPADDRESS:27017/posts` (set environment variable)
     - e.g. `export DB_HOST=mongodb://54.75.59.107:27017/posts`
 - `printenv` or `printenv DB_HOST` to check
@@ -30,7 +34,10 @@ https://www.mongodb.com/docs/v7.0/tutorial/install-mongodb-on-ubuntu/
 
 NOTE: **env variable not persistent** when you use export
 - For **persistence, edit the** `/etc/environment` **file**, adding the new var
-- `source /etc/environment` for changes to take effect
+- Need to log out and in for changes to take effect
+- Stay logged in and only apply to systemd services (reliable for daemons, not GUI sessions):
+    - `sudo systemctl daemon-reload`
+    - `sudo systemctl restart SERVICENAME`
 
 
 ## Databases

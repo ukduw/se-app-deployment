@@ -24,6 +24,7 @@ What considerations should you think of when you are making an EC2 instance?
 
 What do the commands "sudo apt update" and "sudo apt upgrade" do? Why run them?
 
+---
 
 Tell me about yourself
 

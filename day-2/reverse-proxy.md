@@ -35,6 +35,8 @@ server {
     - `cd etc/nginx/sites-available`
     - `sudo sed -i '48a\        proxy_pass http://localhost:3000;' default`
 
+---
+---
 ## Create new conf (alternative method)
 Typically, create custom conf file for new server block additions instead of editing default directly
 - `sudo nano /etc/nginx/sites-available/your_domain`

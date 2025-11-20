@@ -1,11 +1,11 @@
 #!/bin/bash
 
-echo "DB_HOST=mongodb://54.75.59.107:27017/posts" >> /etc/environment
+echo "DB_HOST=mongodb://34.253.125.77.107:27017/posts" >> /etc/environment
     # global env var
-export DB_HOST=mongodb://54.75.59.107:27017/posts
+export DB_HOST=mongodb://34.253.125.77.107:27017/posts
     # reloads env for shell
 
-cd /home/root/se-test-app/nodejs20-se-test-app-2025/app
+cd /home/ubuntu/se-test-app/nodejs20-se-test-app-2025/app
 
 node seeds/seed.js
 

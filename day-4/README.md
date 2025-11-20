@@ -19,3 +19,16 @@ Monitoring:
 3. Autoscaling
     - Automates the fix to the trigger
 
+### Simulating CPU Load
+- Use `yes` command to generate stream of output, consuming CPU resources
+    - e.g. `yes > /dev/null &` runs `yes` in the background
+- `stress`
+    - `sudo apt install stress`
+    - `stress -d` - stress the **storage**
+    - `stress -c` - stress the **CPU**
+    - `stress -v` - stress the **memory**
+    - `stress -i` - stress the **IO**
+    - `stress -t` - timeout period
+- e.g. `stress -c 8 -t 10`
+    - stress 8 CPU cores with a timeout of 10s
+

@@ -19,6 +19,3 @@ Monitoring:
 3. Autoscaling
     - Automates the fix to the trigger
 
-
-
-

@@ -6,6 +6,7 @@ sudo source ~/.bashrc
 
 sudo node ~/se-test-app/nodejs20-se-test-app-2025/app/seeds/seed.js
 
+cd se-test-app/nodejs20-se-test-app-2025/app
 pm2 kill
-pm2 start ~/se-test-app/nodejs20-se-test-app-2025/app/app.js
+pm2 start app.js
 

@@ -22,8 +22,7 @@ Monitoring:
 ### Simulating CPU Load
 - Use `yes` command to generate stream of output, consuming CPU resources
     - e.g. `yes > /dev/null &` runs `yes` in the background
-- `stress`
-    - `sudo apt install stress`
+- `stress` - `sudo apt install stress`
     - `stress -d` - stress the **storage**
     - `stress -c` - stress the **CPU**
     - `stress -v` - stress the **memory**

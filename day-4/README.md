@@ -3,6 +3,7 @@ For example, after setting up (mongo)db once, including enabling it so it runs p
 
 **Image = OS, filesystem, software (installed+configured)**
 
+Note: instance has to be stopped before making an image of it
 
 
 ## Monitoring Resources, AWS CloudWatch

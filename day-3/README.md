@@ -44,6 +44,7 @@ In web server/app instance:
 
 NOTE: **env variable not persistent** when you use export
 - For **persistence, edit the** `/etc/environment` **file**, adding the new var
+    - Can also edit `.bashrc` if you want an env var with more **limited scope**
 - Need to log out and in for changes to take effect
 - Stay logged in and only apply to systemd services (reliable for daemons, not GUI sessions):
     - `sudo systemctl daemon-reload`

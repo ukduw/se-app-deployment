@@ -7,6 +7,18 @@ Note: instance has to be stopped before making an image of it
 
 
 ## Monitoring Resources, AWS CloudWatch
-- 
+Without monitoring:
+- CPU load is too high -> fall over
+
+Monitoring:
+1. Use service (CloudWatch) to monitor the metric (in this case, CPU load)
+    - Put into dashboard (overview)
+    - Requires someone to constantly watch
+2. Add alarm(s) on metric(s)
+    - Will notify user on trigger
+3. Autoscaling
+    - Automates the fix to the trigger
+
+
 
 

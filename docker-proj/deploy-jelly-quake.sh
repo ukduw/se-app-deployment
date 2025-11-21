@@ -15,7 +15,7 @@ cd /srv/media-stack
 # git clone ...
 # clone the docker-compose.yml...
 
-docker compose up -d
+sudo docker compose up -d
     # docker ps to check containers running
 
 

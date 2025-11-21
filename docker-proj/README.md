@@ -153,7 +153,3 @@ with open("/shared-data/filename.json") as f:
      data = json.load(f)
 ```
 
-
-### Practice Scenario
-
-

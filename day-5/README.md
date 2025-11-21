@@ -22,7 +22,19 @@ Real world applications will tend to be some combination of both.
 
 If money was no object, you would just do both.
 
-## header
-placeholder
-- placeholder
+## Structure
+- **VM**
+- **AMI** (with **user data** - 'out the box')
+- **Launch template**
+    - Used by **autoscaling group (ASG)** this template so it can launch more of the same instance
+- **ASG** creates more **VMs**
+- **Scaling policy** determines:
+    - Metric to monitor (CPU 50%)
+    - Minimum VMs (2)
+    - Desired VMs (2)
+    - Maximum VMs (3)
+- **Load balancer**
+    - Sends users to VM(s) with less load, depending on demand
+
+
 

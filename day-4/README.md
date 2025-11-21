@@ -27,7 +27,9 @@ Monitoring:
     - `stress -c` - stress the **CPU**
     - `stress -v` - stress the **memory**
     - `stress -i` - stress the **IO**
+    - `stress -l` - specify load %
     - `stress -t` - timeout period
 - e.g. `stress -c 8 -t 10`
     - stress 8 CPU cores with a timeout of 10s
-
+- e.g. `stress -c 1 -l 60`
+    - stress 1 CPU core to 60% load

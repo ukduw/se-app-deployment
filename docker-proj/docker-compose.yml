@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    container_name: jellyfin
+    ports:
+      - "8096:8096"
+    volumes:
+      - jellyfin-config:/config
+      - jellyfin-cache:/cache
+    restart: unless-stopped
+
+  quakejs:
+    image: openquake/quakejs:latest
+    container_name: quakejs
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+
+volumes:
+  jellyfin-config:
+  jellyfin-cache:
+
+
+# jellyfin config and cache stored in named docker volumes
+  # will persist if container restarts

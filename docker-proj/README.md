@@ -67,6 +67,7 @@ Docker (typically) does not use systemd INSIDE containers.
     - Inside `docker-compose.yml`:
         - `restart: unless-stopped`
     - Will always auto-start itself unless user manually stops it
+        - `docker stop containername`
     - **NO SYSTEMD NEEDED**
 
 

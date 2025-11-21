@@ -41,11 +41,19 @@ Docker (typically) does not use systemd INSIDE containers.
     - e.g. `docker run --rm script-image`
     - `--rm` removes the container afterward
 
+
+### Docker Images
 Docker cannot run a script directly.   
 
 Docker runs **images** (containers built from images). You need:
 1. Docker image containing script, **OR**
 2. A base image (e.g. python:3.12) with the script mounted into it and executed with a command...
+
+Two files: dockerfile + bot.py
+
+Run `docker build -t bot-image .`
+
+Now systemd can run `docker run --rm bot-image`
 
 
 

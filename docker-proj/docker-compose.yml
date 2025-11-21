@@ -9,6 +9,7 @@ services:
     volumes:
       - jellyfin-config:/config
       - jellyfin-cache:/cache
+      - /srv/media:/media
     restart: unless-stopped
 
   quakejs:

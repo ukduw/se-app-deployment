@@ -50,3 +50,7 @@ VMs put in different **availability zones (AZs)**, to protect against outages.
     - refer to asg screenshots...
     - **delete when finished**
 
+Removal order:
+1. load balancer
+2. target group
+3. auto scaling group

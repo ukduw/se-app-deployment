@@ -38,8 +38,15 @@ Docker (typically) does not use systemd INSIDE containers.
     - e.g. 24/7 bot, Jellyfin, QuakeJS...
     - `-d` flag = detached mode - runs container in the background
 - `docker run --rm` is for **systemd-scheduled, one-off jobs**
-    - e.g. `docker run --rm script.py`
+    - e.g. `docker run --rm script-image`
     - `--rm` removes the container afterward
+
+Docker cannot run a script directly.   
+
+Docker runs **images** (containers built from images). You need:
+1. Docker image containing script, **OR**
+2. A base image (e.g. python:3.12) with the script mounted into it and executed with a command...
+
 
 
 ### Docker Compose

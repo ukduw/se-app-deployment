@@ -5,6 +5,9 @@
 sudo mkdir -p /srv/media
 sudo chown 1000:1000 /srv/media
     # default UID/GID for jellyfin inside the container
+    # if jellyfin user in container cannot read files:
+        # sudo chmod -R 755 /srv/media
+            # -R flag = recursive
 
 sudo mkdir -p /srv/media-stack
 cd /srv/media-stack

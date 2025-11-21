@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   jellyfin:
     image: jellyfin/jellyfin:latest
@@ -13,7 +11,7 @@ services:
     restart: unless-stopped
 
   quakejs:
-    image: openquake/quakejs:latest
+    image: treyyoder/quakejs:latest
     container_name: quakejs
     ports:
       - "8080:80"

@@ -47,10 +47,11 @@ VMs put in different **availability zones (AZs)**, to protect against outages.
 1. make launch template
     - using AMI + user data
 2. make auto scaling group
-    - refer to asg screenshots...
+    - REFER TO ASG SCREENSHOTS...
     - **delete when finished**
 
 Removal order:
 1. load balancer
 2. target group
 3. auto scaling group
+

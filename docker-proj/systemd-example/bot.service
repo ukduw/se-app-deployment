@@ -1,0 +1,6 @@
+[Unit]
+Description=Run Bot Mon-Fri, 04:00
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/docker run --rm bot-image

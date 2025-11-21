@@ -88,7 +88,70 @@ Now systemd can run `docker run --rm bot-image`
 
 
 ### Personal Scenario
+Let's say the setup is:
+- Trading bot 1 (24/7, persistent)
+- Trading bot 2 (14/5, systemd-scheduled)
+- Screener (systemd-scheduled)
+- Semi-automated TA (systemd-scheduled)
+    - The former 2 and latter 2 need shared directories/files
+- Jellyfin
+- ...
 
+**Example file structure**
+
+    ```
+    /srv/
+      trading/
+        shared-data/
+          ... .json
+          ... .json
+          ... .csv
+          ... .txt
+        bot1/
+          Dockerfile
+          requirements.txt
+          bot1.py
+          ...
+        bot2/
+          Dockerfile
+          requirements.txt
+          bot2.py
+          ...
+        other-scripts/
+          screener/
+            Dockerfile
+            screener.py
+            ...
+          TA/
+            Dockerfile
+            TA.py
+            ...
+
+      media-stack/
+        docker-compose.yaml
+        jellyfin/
+          config/
+          cache/
+        .../
+        
+      systemd-services/
+        bot2.service
+        bot2.timer
+        screener.service
+        screener.timer
+        TA.service
+        TA.timer
+    ```
+
+**Shared data mounting example**
+- Refer to systemd .service example
+- Inside the bot2.py:
+
+```
+import json
+with open("/shared-data/filename.json") as f:
+     data = json.load(f)
+```
 
 
 ### Practice Scenario

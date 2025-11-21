@@ -22,6 +22,7 @@ Real world applications will tend to be some combination of both.
 
 If money was no object, you would just do both.
 
+
 ## Structure
 - **VM**
 - **AMI** (with **user data** - 'out the box')
@@ -36,5 +37,8 @@ If money was no object, you would just do both.
 - **Load balancer**
     - Sends users to VM(s) with less load, depending on demand
 
+VMs put in different **availability zones (AZs)**, to protect against outages.
+
+![structure-flowchart](autoscaling-flowchart.png)
 
 

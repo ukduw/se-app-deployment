@@ -33,7 +33,48 @@ Docker (typically) does not use systemd INSIDE containers.
     - DO NOT write a separate systemd timer to force-close a container (unless to enforce a hard cutoff time)
 
 
+### Long-running vs One-off services
+- `docker-compose up` is intended for long-running services
+    - e.g. 24/7 bot, Jellyfin, QuakeJS...
+    - `-d` flag = detached mode - runs container in the background
+- `docker run --rm` is for **systemd-scheduled, one-off jobs**
+    - e.g. `docker run --rm script.py`
+    - `--rm` removes the container afterward
 
 
-### Personal Scenarios
+### Docker Compose
+- `docker` alone is just basic commads like:
+    - `docker run`
+    - `docker stop`
+    - `docker logs`
+- **Docker Compose uses YAML files**
+    1. Which containers to run
+    2. Which images to use
+    3. What volumes to mount
+    4. What ports to expose
+    5. How/If they should restart
+    6. Environment variables, networks...
+    - run with `docker compose up -d`
+- **Example file structure**:
+    ```
+    /srv/   ("service data")
+      media-stack/      (cd here)
+        docker-compose.yml
+        jellyfin/
+        quakejs/
+    ```
+- **Persistent services**
+    - Inside `docker-compose.yml`:
+        - `restart: unless-stopped`
+    - Will always auto-start itself unless user manually stops it
+    - **NO SYSTEMD NEEDED**
+
+
+
+### Personal Scenario
+
+
+
+### Practice Scenario
+
 

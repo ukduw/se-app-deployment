@@ -42,3 +42,11 @@ VMs put in different **availability zones (AZs)**, to protect against outages.
 ![structure-flowchart](autoscaling-flowchart.png)
 
 
+---
+---
+1. make launch template
+    - using AMI + user data
+2. make auto scaling group
+    - refer to asg screenshots...
+    - **delete when finished**
+

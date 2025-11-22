@@ -86,6 +86,26 @@ Now systemd can run `docker run --rm bot-image`
     - **NO SYSTEMD NEEDED**
 
 
+## PERSISTENCE
+Containers are designed to be ephemeral.
+
+Things that DON'T persist:
+- Any files created/modified inside the container will be lost when the container stops
+    - Files must be explicitly saved to a volume
+    - Or, committed to an image
+- This includes software installed with apt, pip, etc...
+    - Can be baked into the image via Dockerfile
+- Config changes made inside the container that are not saved to a volume
+- In-memory data (e.g. variables in script)
+
+Things that DO persist:
+- Volumes
+    - Volumes are persistent storage areas outside the container's lifecycle
+    - Typically the host filesystem, mounted onto the container
+- The Docker image itself
+- Container metadata
+    - Container's name, IP address, config...
+
 
 ### Personal Scenario
 Let's say the setup is:

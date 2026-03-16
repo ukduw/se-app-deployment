@@ -1,5 +1,20 @@
 # Intro to cloud computing
 On Premises (On Prem) - local data centres for your own digital services
+- [Intro to cloud computing](#intro-to-cloud-computing)
+  - [Cloud computing](#cloud-computing)
+  - [Examples of popular cloud services](#examples-of-popular-cloud-services)
+  - [Cloud Deployment Models](#cloud-deployment-models)
+  - [Cloud Service Types (XaaS)](#cloud-service-types-xaas)
+  - [Advantages and disadvantages of cloud computing](#advantages-and-disadvantages-of-cloud-computing)
+    - [Advantages](#advantages)
+    - [Disadvantages](#disadvantages)
+    - [Is migrating to cloud always cheaper?](#is-migrating-to-cloud-always-cheaper)
+    - [Guaranteed levels of service](#guaranteed-levels-of-service)
+  - [Marketshare](#marketshare)
+  - [Physical](#physical)
+  - [Virtual Machines](#virtual-machines)
+  - [What do you pay for?](#what-do-you-pay-for)
+    - [Virtual networks in AWS](#virtual-networks-in-aws)
 
 ## Cloud computing
 Cloud computing - computing resources accessed over the internet on demand
@@ -80,6 +95,17 @@ Determines how much responsibility is taken on by the user vs provider
 - Compliance issues (e.g. financial, governmental institutions...)
 - Service outages
 
+### Is migrating to cloud always cheaper?
+- 2 types of calculators:
+  - Pricing calculators
+  - Total cost of ownership (TCO) calculators
+- Depends on the organization - deep analysis is usually required
+
+### Guaranteed levels of service
+- Service Level Agreements - typical for most cloud services
+  - Guarantees expected level of service, including metrics of performance, uptime guarantees...
+  - SLO often relate to how available the service is (uptime)
+
 
 ## Marketshare
 1. Amazon Web Services (AWS)
@@ -105,10 +131,24 @@ Determines how much responsibility is taken on by the user vs provider
 
 
 ## Virtual Machines
-A computer emulated on a computer
+**A computer emulated on a computer**
 - On local PC, you assign x CPUs, y RAM
-- Inelastic and, on a personal machine, resource intensive
+  - Inelastic and, on a personal machine, resource intensive
 - On cloud, the hardware is 1000s of CPUs, sticks of ram, etc...
 
 - PC -> SSH -> GUI-less VM on remote server
 
+
+## What do you pay for?
+- **VM running** - CPU, memory
+- **VM stopped** - Storage (disk)
+- Generally, you will **pay for CPU, memory, storage**
+- **Network traffic** - may need to pay for **OUTgoing traffic (egress)**
+  - Especially when data needs to cross **different networks in different geographical regions**
+- Anything in limited supply, e.g. public IP addresses
+
+### Virtual networks in AWS
+- AWS has a **default VPC** (Virtual Private Cloud) **automatically created for you in every region**
+  - Similar to Azure Virtual Networks
+  - But, on **Azure, there is NOT a default Virtual Network ready** for you in every region
+    - You must create it yourself if you want it

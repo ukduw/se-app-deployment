@@ -87,7 +87,7 @@
 - `sudo systemctl enable/disable [service name]` enable/disable as service
 - `sudo systemctl restart [service name]`
 - `sudo systemctl start/stop [service name]` starts/stops service once
-- `systemctl daemon-reexec`
-- `systemctl daemon-reload`
+- `systemctl daemon-reexec` **restarts entire systemd manager itself**, typically used when upgrading systemd itself or **changing source code of running services**
+- `systemctl daemon-reload` **updates unit file changes** (service/timer files) and rebuilds dependency tree **without interrupting running services**
 
 

@@ -28,7 +28,7 @@
 ## Files
 ### File manipulation
 - `mkdir` - make directory
-- `mv [filename] [directory/new filename]` - move/rename files
+- `mv [filename] [directory/new filename/filepath]` - move/rename files
 - `rm` - remove file
   - `rm -r` - remove directory recursively
   - `rm -d` - remove empty directory

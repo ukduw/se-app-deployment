@@ -87,4 +87,7 @@
 - `sudo systemctl enable/disable [service name]` enable/disable as service
 - `sudo systemctl restart [service name]`
 - `sudo systemctl start/stop [service name]` starts/stops service once
-- 
+- `systemctl daemon-reexec`
+- `systemctl daemon-reload`
+
+

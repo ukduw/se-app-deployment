@@ -76,6 +76,16 @@
   - `777` 4 read, 2 write, 1 execute - User, Group, Others
     - e.g. `400` read-only for user, no permissions for everyone else
 
+### Environment
+- `printenv` - display all environment variables
+  - `echo $MYNAME` - print specific env var
+- `export` - set environment variable
+  - `export MYNAME=ed`
+- `unset` - clear an env var
+- `nano .bashrc` - to edit `.bashrc` file, as opposed to current-shell-session-only `export`
+  - `export MYNAME="ed is persistent now"`
+  - `source .bashrc` - reload the `.bashrc` after edits
+
 
 ## Services
 ### Info
@@ -90,4 +100,47 @@
 - `systemctl daemon-reexec` **restarts entire systemd manager itself**, typically used when upgrading systemd itself or **changing source code of running services**
 - `systemctl daemon-reload` **updates unit file changes** (service/timer files) and rebuilds dependency tree **without interrupting running services**
 
+
+## Processes
+- **A program that is loaded into RAM and is currently being processed by the CPU**
+  - It may look like many processes are running concurrently
+  - But **a single-core CPU can only run one process at a time**
+    - (**multi-core can run more than one concurrently**)
+  - **Linux is actually quickly switching between running processes**
+- There are **two types of processes**
+  - **User processes**
+  - **System processes**
+    - Most running processes are system processes
+    - Usually provide no application or interface for the user
+    - **Services like**:
+      - Web server
+      - FTP server
+      - File server
+      - Print server
+      - Logging server
+
+### Process management
+- `ps` - 
+  - `ps -A` - 
+  - `ps -E` - 
+  - `ps aux` - 
+- `top`, `htop`
+  - `Shift+M` - 
+  - `Shift+P` - 
+  - `Shift+N` - 
+- `kill` - 
+  - Levels:
+    - `kill -1` - 
+    - `kill -15` - 
+    - `kill -9` - 
+- `sleep` - 
+  - `sleep 3`, `sleep 5000`, `sleep 7000`, `sleep 9000`...
+- `jobs` - 
+  - `jobs -l` - 
+  
+
+### Breakout of terminal engagement
+- `Ctrl+C`
+- `Ctrl+Z`
+- `q`
 

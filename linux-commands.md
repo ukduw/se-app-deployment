@@ -120,23 +120,23 @@
       - Logging server
 
 ### Process management
-- `ps` - 
-  - `ps -A` - 
-  - `ps -E` - 
-  - `ps aux` - 
-- `top`, `htop`
-  - `Shift+M` - 
-  - `Shift+P` - 
-  - `Shift+N` - 
-- `kill` - 
+- `ps` - lists all currently running processes (Process Status)
+  - `ps -A` - show all processes on the system
+  - `ps -E` - show environment processes
+  - `ps aux` - detailed list (a (all users), u (user-oriented format), x (includes processes without a controlling terminal, like daemons))
+- `top`, `htop` - real-time process monitoring (as opposed to static `ps aux`)
+  - `Shift+M` - RAM
+  - `Shift+P` - CPU
+  - `Shift+N` - Most recent
+- `kill [options] [PID]` - sends signals to processes (most commonly to terminate them - i.e. just `kill`)
   - Levels:
-    - `kill -1` - 
-    - `kill -15` - 
-    - `kill -9` - 
-- `sleep` - 
+    - `kill -1` - SIGHUP: Hangup, used to reload
+    - `kill -15` - SIGTERM: Graceful termination (default if no flag)
+    - `kill -9` - SIGKILL: Force kill, cannot be caught, blocks cleanup
+- `sleep` - pause execution for x seconds
   - `sleep 3`, `sleep 5000`, `sleep 7000`, `sleep 9000`...
-- `jobs` - 
-  - `jobs -l` - 
+- `jobs` - list background and suspended jobs
+  - `jobs -l` - also shows PIDs of jobs
   
 
 ### Breakout of terminal engagement
